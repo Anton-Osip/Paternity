@@ -1,0 +1,370 @@
+.header {
+     position: absolute;
+     width: 100%;
+     top: 0;
+     left: 0;
+     padding-top: 75px;
+     z-index: 99999;
+
+     &__inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+     }
+
+     &__logo-link {
+          display: block;
+     }
+
+     &__main-logo-img {
+          object-fit: contain;
+          width: 342px;
+          height: 72px;
+     }
+
+     &__small-logo-img {
+          display: none;
+          width: 82px;
+          height: 82px;
+     }
+
+     &__wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 1043px;
+     }
+
+
+     &__list {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+     }
+
+     &__item {
+          margin: 0 18px;
+     }
+
+     &__link {
+          padding: 4px 0;
+          @include font(700, 20px, 24px, $font-family);
+          color: $white-menu;
+          opacity: 0.8;
+          position: relative;
+          margin-bottom: 2px;
+          transition: color .3s, opacity .3s;
+     }
+
+     &__link::after {
+          content: '';
+          display: block;
+          height: 2px;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background-color: $logo-color;
+          opacity: 0;
+          transform: translateX(-100%);
+          transition: opacity .3s, transform .3s;
+     }
+
+     &__link:hover:after {
+          opacity: 1;
+          transform: translateX(0%);
+     }
+
+     &__link:hover {
+          color: $logo-color;
+          opacity: 1;
+     }
+
+     &__contacts {
+          @include font(700, 20px, 24px, $font-family);
+          color: $white-menu;
+     }
+
+     &__contacts-top {
+          display: flex;
+          align-items: center;
+          margin-bottom: 2px;
+     }
+
+     &__contacts-text,
+     &__contacts-mb {
+          display: none;
+     }
+
+     &__phone:hover {
+          color: $logo-color;
+     }
+
+     &__contacts-main-phon {
+          display: flex;
+          align-items: center;
+     }
+
+     &__contacts-icons {
+          margin-left: 8px;
+     }
+
+     &__contacts-icon {
+          fill: $white-menu;
+          margin: 0 5px;
+          width: 24px;
+          height: 24px;
+     }
+
+     &__mail {
+          transition: color .3s;
+     }
+
+     &__mail:hover {
+          color: $logo-color;
+     }
+
+     &__menu {
+          display: none;
+     }
+
+     &__menu-text {
+          display: none;
+     }
+}
+
+@media(max-width:1440px) {
+     .header {
+          padding-top: 4.6875em;
+
+          &__main-logo-img {
+               width: 21.375em;
+               height: 4.5em;
+          }
+
+          &__wrapper {
+               width: 65.1875em;
+          }
+
+          &__item {
+               margin: 0 1.125em;
+          }
+
+          &__contacts,
+          &__link {
+               @include font(700, 1.25em, 1.5em, $font-family);
+          }
+
+          &__contacts-icons {
+               margin-left: 0.5em;
+          }
+
+          &__contacts-icon {
+               fill: $white-menu;
+               margin: 0 0.3125em;
+               width: 1.5em;
+               height: 1.5em;
+          }
+     }
+}
+
+@media(max-width:998px) {
+     .header__main-logo-img {
+          display: none;
+     }
+
+     .header__small-logo-img {
+          display: block;
+          width: 5.1em;
+          height: 5.1em;
+     }
+}
+
+@media(max-width:475px) {
+     .header {
+          &__wrapper {
+               position: absolute;
+               transform: translateY(-300%);
+               transition: transform .5s;
+          }
+
+          &__menu {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: 36px;
+               height: 36px;
+               position: absolute;
+               right: 25px;
+          }
+
+          &__line {
+               width: 30px;
+               height: 2px;
+               background: $white-menu;
+               position: relative;
+          }
+
+          &__line::after,
+          &__line::before {
+               content: "";
+               display: block;
+               width: 30px;
+               height: 2px;
+               background: $white-menu;
+               position: absolute;
+          }
+
+          &__line::after {
+               top: 8px
+          }
+
+          &__line::before {
+               bottom: 8px;
+          }
+
+          &__small-logo-img {
+               width: 42px;
+               height: 42px;
+          }
+
+          &__wrapper--active {
+               position: absolute;
+               top: 0;
+               left: 0;
+               display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               justify-content: flex-start;
+               transform: translateY(0);
+               width: 100%;
+               min-height: 100vh;
+               background: $white-menu;
+               transition: transform .3s;
+               padding: 32px;
+
+               .header {
+                    &__menu-text {
+                         @include font(500, 16px, 24px, $font-family);
+                         display: block;
+                         color: #000000;
+                         opacity: 0.3;
+                         margin-bottom: 32px;
+                    }
+
+                    &__list {
+                         display: flex;
+                         flex-direction: column;
+                         align-items: flex-start;
+                         justify-content: center;
+                    }
+
+                    &__item {
+                         margin: 0 0 32px 0;
+                         width: 100%;
+                    }
+
+                    &__link {
+                         @include font(700, 16px, 24px, $font-family);
+                         color: $headers-color;
+                         opacity: 1;
+                         margin-bottom: 0px;
+                         transition: color .3s, opacity .3s;
+                    }
+
+                    &__contacts {
+                         margin-top: 16px;
+                         @include font(700, 16px, 24px, $font-family);
+                         color: $headers-color;
+                         display: flex;
+                         flex-direction: column;
+                    }
+
+                    &__contacts-top {
+                         order: 2;
+                         display: block;
+                    }
+
+                    &__contacts-mb {
+                         display: block;
+                    }
+
+                    &__contacts-text {
+                         @include font(500, 16px, 24px, $font-family);
+                         display: block;
+                         margin-bottom: 8px;
+                         color: #000000;
+                         opacity: 0.3;
+                    }
+
+                    &__phone {
+                         display: block;
+                         margin-bottom: 12px;
+                         color: #84A1DB;
+                         @include font(500, 16px, 24px, $font-family);
+                    }
+
+                    &__phone:hover {
+                         color: $logo-color;
+                    }
+
+                    &__svg-links {
+                         display: inline;
+                         width: 24px;
+                         height: 19px;
+                    }
+
+                    &__contacts-icon {
+                         fill: $headers-color;
+                         width: 24px;
+                         height: 24px;
+                    }
+
+                    &__contacts-bottom {
+                         order: 1;
+                         margin-bottom: 24px;
+                    }
+
+                    &__mail {
+                         @include font(500, 16px, 24px, $font-family);
+                         margin-bottom: 8px;
+                         color: $headers-color;
+                    }
+               }
+          }
+
+          .header__menu--active {
+
+               .header__line {
+                    display: block;
+                    width: 30px;
+                    height: 2px;
+                    background: $headers-color !important;
+                    position: relative;
+                    transform: rotateZ(-45deg);
+               }
+
+               .header__line::after,
+               .header__line::before {
+                    content: "";
+                    display: block;
+                    width: 30px;
+                    height: 2px;
+                    background: $headers-color !important;
+                    position: absolute;
+                    transition: transform .3s;
+               }
+
+               .header__line::after {
+                    top: 0px;
+                    transform: rotateZ(90deg);
+               }
+
+               .header__line::before {
+                    display: none;
+               }
+          }
+
+     }
+}

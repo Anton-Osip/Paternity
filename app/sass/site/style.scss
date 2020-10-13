@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    box-sizing: border-box;
+    font-size: calc(.1rem + 1vw);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+}
+
+body {
+    font-family: $font-family;
+    color: #000;
+}
+
+.btn {
+    color: $headers-color;
+    @include font(700, 20px, 24px, $font-family);
+    padding: 20px 36px;
+    background: $btn-color;
+    border: initial;
+    outline: initial;
+    transform: scale(1);
+    transition: background-color .3s, transform .3s;
+}
+
+.btn:hover {
+    background-color: $logo-color;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
