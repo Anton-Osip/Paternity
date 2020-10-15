@@ -1,50 +1,5 @@
 .banner__section {
-     background: url(../../img/header/banner-bg.jpg)no-repeat center center/cover;
-     backdrop-filter: blur(20px);
+     background: url('../../img/header/banner-bg.jpg')no-repeat center center/cover;
      position: relative;
-}
-
-.banner__section:after {
-     content: '';
-     display: block;
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
-     z-index: 1;
-}
-
-.banner {
-     position: relative;
-     z-index: 5;
-}
-
-.banner {
-     padding: 288px 0;
-
-     &__info {
-          color: $white-menu;
-          max-width: 1008px;
-     }
-
-     &__title {
-          @include font(700, 84px, 84px, $font-family);
-          margin-bottom: 36px;
-     }
-
-     &__text {
-          max-width: 600px;
-          @include font(500, 24px, 30px, $font-family);
-          opacity: 0.8;
-          margin-bottom: 72px;
-     }
-
-     &__btn {
-          color: $headers-color;
-          @include font(500, 24px, 30px, $font-family);
-          letter-spacing: 1px;
-          text-transform: uppercase;
-     }
+     height: 100vh;
 }

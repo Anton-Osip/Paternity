@@ -1,6 +1,5 @@
 // const header = document.querySelector('.header');
 // const bannerSection = document.querySelector('.banner__section');
-// const headerHeight = header.clientHeight;
 // const bannerSectionHeight = bannerSection.clientHeight;
 
 // let timerId = setInterval(headerScroll, 100);
@@ -17,9 +16,10 @@
 
 
 const headerMenu = document.querySelector('.header__menu');
-const headerWrapper = document.querySelector('.header__wrapper');
+const headerMainWrapper = document.querySelector('.header__main-wrapper');
 
 headerMenu.addEventListener('click',()=>{
-     headerWrapper.classList.toggle('header__wrapper--active');
+     headerMainWrapper.classList.toggle('header__main-wrapper--active');
      headerMenu.classList.toggle('header__menu--active');
 })
+
