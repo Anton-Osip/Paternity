@@ -1,0 +1,75 @@
+.services {
+     padding: 8.75rem 2.625rem;
+     background-color: #fff;
+
+     &__card {
+          background: #F9F9F9;
+          padding: 3.31rem 1.25625rem 2.25rem;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          margin-bottom: 1.875rem;
+     }
+
+     &__card-suptitle {
+          @include font(500, 1.125rem, 1.2em, $font-family);
+          margin-bottom: 0.8em;
+          color: $menu-color;
+          opacity: 0.5;
+          z-index: 0;
+     }
+
+     &__card-title {
+          @include font(700, 2.125rem, 1.41em, $font-family);
+          color: $menu-color;
+          margin-bottom: 0.8958em;
+     }
+
+     &__card-list {
+          list-style: none;
+          margin-bottom: 2.5rem;
+          height: 0;
+          display: none;
+          overflow: hidden;
+     }
+
+     &__card-item {
+          @include font(500, 1rem, 1.5em, $font-family);
+          color: #000000;
+          opacity: 0.4;
+          position: relative;
+          padding-left: 2rem;
+     }
+
+     &__card-item::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          background: url(../../img/services/OK.png)no-repeat center center/cover;
+          width: 1.5rem;
+          height: 1.5rem;
+     }
+
+     &__card-coust {
+          @include font(700, 2.625rem, 1.14em, $font-family);
+          color: #84A1DB;
+          margin-bottom: 1.04em;
+     }
+
+     &__card-btn {
+          @include font(700, 1rem, 1.5em, $font-family);
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #84A1DB;
+          border: 2px solid #84A1DB;
+          box-sizing: border-box;
+          display: none;
+
+     }
+
+     &__card-arrow {
+          align-self: flex-end;
+          cursor: pointer;
+     }
+}

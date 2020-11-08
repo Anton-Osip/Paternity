@@ -1,0 +1,59 @@
+.banner {
+     background: #000 url(../../img/banner/banner-bg.jpg)no-repeat bottom center/cover;
+     padding: 20rem 0 19.375rem;
+
+     &__inner {
+
+          width: 58.333%;
+          color: #fff;
+     }
+
+     &__title {
+          @include font(700, 5.25rem, 1em, $font-family);
+          margin-bottom: 0.42em;
+     }
+
+     &__subtitle {
+          @include font(500, 1.5rem, 1.25em, $font-family);
+          margin-bottom: 3em;
+          color: inherit;
+          opacity: 0.8;
+          width: 65%;
+     }
+
+     &__btn {
+          background: #84A1DB;
+          text-transform: uppercase;
+          @include font(700, 1.25rem, 1.2em, $font-family);
+          letter-spacing: 1px;
+          color: $menu-color;
+     }
+}
+
+@media(max-width:524px) {
+     .banner {
+          &__inner {
+               padding: 4.5rem 0 14.187rem;
+               width: 100%;
+               color: #fff;
+          }
+
+          &__title {
+               @include font(700, 1.875rem, 1.06em, $font-family);
+               margin-bottom: 0.5em;
+          }
+
+          &__subtitle {
+               @include font(500, 1rem, 1.5em, $font-family);
+               margin-bottom: 1.5em;
+               width: 100%;
+          }
+
+          &__btn {
+               width: 100%;
+               padding: 17px 0;
+               text-align: center;
+               @include font(700, 0.875rem, 1em, $font-family);
+          }
+     }
+}

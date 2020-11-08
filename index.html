@@ -12,95 +12,201 @@
 </head>
 
 <body>
-     <section class="banner__section">
-
-          <div class="header">
+     <section class="banner">
+          <header class="header">
                <div class="container">
                     <div class="header__inner">
-                         <a class="header__small-img-link" href="index.html">
-                              <img class="header__small-img" src="/img/header/small-logo.png" alt="Логотип Отцовство">
+                         <a href="index.html" class="header__small-logo-container">
+                              <img src="img/header/small-logo.svg" alt="Логотип социально просветительского учреждения 'ОТЦОВСТВО'" class="header__small-logo">
                          </a>
-
-                         <div class="header__main-wrapper">
-
-                              <a class="header__main-img-link" href="index.html">
-                                   <img class="header__main-img" src="/img/header/main-logo.png" alt="Логотип Отцовство">
+                         <!-- /.header__logo-container -->
+                         <div class="header__nav-container">
+                              <a href="index.html" class="header__big-logo-container">
+                                   <img src="img/header/big-logo.svg" alt="Логотип социально просветительского учреждения 'ОТЦОВСТВО'" class="header__big-logo">
                               </a>
-                              <span class="header__mobile-text header__mobile-menu-text">Меню</span>
-                              <ul class="header__list">
-                                   <li class="header__item">
-                                        <a class="header__link" href="#" >Услуги</a>
-                                   </li>
-                                   <li class="header__item">
-                                        <a class="header__link" href="#" >О нас</a>
-                                   </li>
-                                   <li class="header__item">
-                                        <a class="header__link" href="#" >Процесс работы</a>
-                                   </li>
-                                   <li class="header__item">
-                                        <a class="header__link" href="#" >Клиеты</a>
-                                   </li>
-                                   <li class="header__item">
-                                        <a class="header__link" href="#" >Контакты</a>
-                                   </li>
+                              <span class="header__text header__text-menu">Меню</span>  
+                              <ul class="header__nav">
+                                   <li class="header__item"><a href="#" class="header__link header__hover-block">Услуги</a></li>
+                                   <li class="header__item"><a href="#" class="header__link header__hover-block">О нас</a></li>
+                                   <li class="header__item"><a href="#" class="header__link header__hover-block">Процесс работы</a></li>
+                                   <li class="header__item"><a href="#" class="header__link header__hover-block">Клиенты</a></li>
+                                   <li class="header__item"><a href="#" class="header__link header__hover-block">Контакты</a></li>
                               </ul>
-
+                              <!-- /.header__nav -->
                               <div class="header__contacts">
-                                   <div class="header__top">
-                                        <div class="header__contacts-not">
-                                             <div class="header__contacts-menu">
-                                                  <span class="header__mobile-text">
-                                                       Контактная информация
-                                                  </span>
-                                                  <a href="tel:+375173648812" class="header__tel">+ 375 17 364-88-12</a>
-                                                  <a href="tel:+375252700295" class="header__tel">+ 375 25 270-02-95</a>
-                                             </div>
+                                   <div class="header__phon-container">
+                                        <span class="header__text">Контактная информация</span>  
+                                        <div class="header__menu-phon">
+                                             <a href="tel:+ 375173648812" class="header__phon">+ 375 17 364-88-12</a>
+                                             <a href="tel:+ 375172700295" class="header__phon">+ 375 17 270-02-95</a>
                                         </div>
-                                        <div class="header__contacts-main">
-                                             <a href="tel:+375293577377" class="header__tel">+375 29 357-73-77</a>
-                                             
-                                             <div class="header__contacts-icons">
-                                                  <a href="#" class="header__contacts-icon-link">
-                                                       <svg class=" header__contacts-icon ">
-                                                            <use xlink:href="img/icons.svg#telegram"></use>
-                                                       </svg>
-                                                  </a>
-                                                  <a href="#" class="header__contacts-icon-link">
-                                                       <svg class=" header__contacts-icon ">
-                                                            <use xlink:href="img/icons.svg#phone"></use>
-                                                       </svg>
-                                                  </a>
-                                             </div>
+                                        <!-- /.header__menu-phon -->
+                                        <div class="header__main-phon">
+                                             <a href="tel:+375293577377" class="header__phon header__hover-block">+ 375 29 357-73-77</a>
+                                             <a href="#" class="header__telegram-link">
+                                                  <svg class=" header__icon " width="24" height="24">
+                                                       <use xlink:href="img/icons.svg#telegram"></use>
+                                                  </svg>
+                                             </a>
+                                             <a href="#" class="header__viber-link">
+                                                  <svg class=" header__icon " width="24" height="24">
+                                                       <use xlink:href="img/icons.svg#viber"></use>
+                                                  </svg>
+                                             </a>
                                         </div>
+                                        <!-- /.header__main-phon -->
                                    </div>
-                                        
-                                   <div class="header__bottom">
-                                        <span class="header__mobile-text">
-                                             Почта
-                                        </span>
-                                        <a href="mailto:info@komplex.by" class="header__tel">info@komplex.by</a>
+                                   <!-- /.header__phon-container -->
+                                   <div class="header__mail-container">
+                                        <span class="header__text">Почта</span>  
+                                        <a href="mailto:info@komplex.by" class="header__mail header__hover-block">info@komplex.by</a>
                                    </div>
                               </div>
-                         </div>
-                         <button class="btn header__btn"></button>
+                              <!-- /.header__contacts -->
 
-                         <div class="header__menu">
+                         </div>
+                         <!-- /.header__nav-container -->
+                         <button type="button" class="btn header__btn">Получить консультацию</button>
+
+                         <menu class="header__menu ">
                               <div class="header__line"></div>
+                         </menu>
+                    </div>
+                    <!-- /.header__inner -->
+               </div>
+               <!-- /.container -->
+          </header>
+          
+          <div class="container">
+               <div class="banner__inner">
+                    <h1 class="banner__title">Регистрация и сопровождение бизнеса</h1>
+                    <h4 class="banner__subtitle">Предоставляем весь комплекс услуг, необходимый для открытия и стартового сопровождения вашего бизнеса.</h4>
+                    <button class="banner__btn btn" type="button">Получить консультацию</button>
+               </div>
+               <!-- /.banner__inner -->
+          </div>          
+          <!-- /.container -->
+     </section>
+     <!-- /.banner -->
+     <section class="services section">
+          <div class="container">
+
+               <h3 class="title services__title">Услуги</h3>
+
+               <div class="row services__cards">
+
+                    <div class="col-lg-4 ">
+                         <div class="services__card">
+                                   <span class="services__card-suptitle">Комплекс 1</span>
+                                   <h4 class="services__card-title">
+                                        «Юридический адрес»
+                                   </h4>
+                                   <ul class="services__card-list">
+                                        <li class="services__card-item">Предоставление юридического адреса.</li>
+                                   </ul>
+                                   <span class="services__card-coust">30 руб./мес.</span>
+                                   <button class="services__card-btn btn">заказать комплекс</button>
+                                   <svg class=" services__card-arrow" width="49" height="16">
+                                        <use xlink:href="img/icons.svg#services-arrow"></use>
+                                   </svg>
                          </div>
                     </div>
+                    <!-- /.services__card -->
+
+                    <div class="col-lg-4 ">
+                         <div class="services__card">
+                                   <span class="services__card-suptitle">Комплекс 1</span>
+                                   <h4 class="services__card-title">
+                                        «Юридический адрес»
+                                   </h4>
+                                   <ul class="services__card-list">
+                                        <li class="services__card-item">Предоставление юридического адреса.</li>
+                                   </ul>
+                                   <span class="services__card-coust">30 руб./мес.</span>
+                                   <button class="services__card-btn btn">заказать комплекс</button>
+                                   <svg class=" services__card-arrow" width="49" height="16">
+                                        <use xlink:href="img/icons.svg#services-arrow"></use>
+                                   </svg>
+                         </div>
+                    </div>
+                    <!-- /.services__card -->
+
+                    <div class="col-lg-4 ">
+                         <div class="services__card">
+                                   <span class="services__card-suptitle">Комплекс 1</span>
+                                   <h4 class="services__card-title">
+                                        «Юридический адрес»
+                                   </h4>
+                                   <ul class="services__card-list">
+                                        <li class="services__card-item">Предоставление юридического адреса.</li>
+                                   </ul>
+                                   <span class="services__card-coust">30 руб./мес.</span>
+                                   <button class="services__card-btn btn">заказать комплекс</button>
+                                   <svg class=" services__card-arrow" width="49" height="16">
+                                        <use xlink:href="img/icons.svg#services-arrow"></use>
+                                   </svg>
+                         </div>
+                    </div>
+                    <!-- /.services__card -->
+
+                    <div class="col-lg-4 ">
+                         <div class="services__card">
+                                   <span class="services__card-suptitle">Комплекс 1</span>
+                                   <h4 class="services__card-title">
+                                        «Юридический адрес»
+                                   </h4>
+                                   <ul class="services__card-list">
+                                        <li class="services__card-item">Предоставление юридического адреса.</li>
+                                   </ul>
+                                   <span class="services__card-coust">30 руб./мес.</span>
+                                   <button class="services__card-btn btn">заказать комплекс</button>
+                                   <svg class=" services__card-arrow" width="49" height="16">
+                                        <use xlink:href="img/icons.svg#services-arrow"></use>
+                                   </svg>
+                         </div>
+                    </div>
+                    <!-- /.services__card -->
+
+                    <div class="col-lg-4 ">
+                         <div class="services__card">
+                                   <span class="services__card-suptitle">Комплекс 1</span>
+                                   <h4 class="services__card-title">
+                                        «Юридический адрес»
+                                   </h4>
+                                   <ul class="services__card-list">
+                                        <li class="services__card-item">Предоставление юридического адреса.</li>
+                                   </ul>
+                                   <span class="services__card-coust">30 руб./мес.</span>
+                                   <button class="services__card-btn btn">заказать комплекс</button>
+                                   <svg class=" services__card-arrow" width="49" height="16">
+                                        <use xlink:href="img/icons.svg#services-arrow"></use>
+                                   </svg>
+                         </div>
+                    </div>
+                    <!-- /.services__card -->
+
+                    <div class="col-lg-4 ">
+                         <div class="services__card">
+                                   <span class="services__card-suptitle">Комплекс 1</span>
+                                   <h4 class="services__card-title">
+                                        «Юридический адрес»
+                                   </h4>
+                                   <ul class="services__card-list">
+                                        <li class="services__card-item">Предоставление юридического адреса.</li>
+                                   </ul>
+                                   <span class="services__card-coust">30 руб./мес.</span>
+                                   <button class="services__card-btn btn">заказать комплекс</button>
+                                   <svg class=" services__card-arrow" width="49" height="16">
+                                        <use xlink:href="img/icons.svg#services-arrow"></use>
+                                   </svg>
+                         </div>
+                    </div>
+                    <!-- /.services__card -->
                </div>
+               <!-- /.row -->
           </div>
-          <!-- /.container -->
-     </div>
-     <!-- /.header -->
-
-          <div class="banner">
-
-          </div>
-          <!-- /.banner -->
-
      </section>
-     <!-- /.banner__section -->
+     <!-- /.services -->
      <!-- main.js -->
      <script src="build/js/main.js"></script>
 </body>

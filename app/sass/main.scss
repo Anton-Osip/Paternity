@@ -2,9 +2,8 @@
 @import "site/variables";
 @import "site/mixins/mixins";
 @import "site/grid";
-@import "site/header";
-@import "site/banner";
-// @import "site/style";
-// @import "site/style";
-
 @import "site/style";
+
+@import "site/1header";
+@import "site/2banner";
+@import "site/3services";
