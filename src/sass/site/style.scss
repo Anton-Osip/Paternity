@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+:root {
+	box-sizing: border-box;
+	font-size: 16px;
+	--pixel-size: 20;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+}
+
+body {
+	font-family: $font-family;
+	color: #000;
+}
+
+.btn {
+	width: 120px;
+	height: 120px;
+	border: 0px;
+	background-color: $btn-color;
+	color: #ffffff;
+	transition: background-color 0.3s;
+	&:hover {
+		background-color: $hover-color;
+	}
+	&:active {
+		background-color: $active-color;
+	}
+}
+@media (max-width: 1950px) {
+	:root {
+		font-size: calc(0.06rem + 1vw);
+	}
+}
+
+@media (max-width: 1027px) {
+	:root {
+		font-size: 16px;
+		--pixel-size: 10;
+	}
+}
