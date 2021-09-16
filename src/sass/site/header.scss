@@ -1,0 +1,57 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo{ 
+        margin-right: 25px;
+        img{
+            width: 342px;
+            height: 72px;
+        }
+    }
+    &__mobil-menu {
+        flex-basis: 1024px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__nav {
+        flex-basis: 649px;
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__link {
+        font-size: 20px;
+        line-height: 24px;
+        color: $nav-color;
+        opacity: 0.9;
+    }
+    &__contacts {
+    }
+    &__phones {
+    }
+    &__phon {
+    }
+    &__emails {
+    }
+    &__email {
+    }
+    &__btn {
+        display: none;
+    }
+    &__menu {
+        display: none;
+    }
+    &__line {
+    }
+}

@@ -23,32 +23,10 @@ img {
 
 body {
 	font-family: $font-family;
+	font-style: normal;
+    font-weight: bold;
 	color: #000;
 }
-
-.btn {
-	width: 120px;
-	height: 120px;
-	border: 0px;
-	background-color: $btn-color;
-	color: #ffffff;
-	transition: background-color 0.3s;
-	&:hover {
-		background-color: $hover-color;
-	}
-	&:active {
-		background-color: $active-color;
-	}
-}
-@media (max-width: 1950px) {
-	:root {
-		font-size: calc(0.06rem + 1vw);
-	}
-}
-
-@media (max-width: 1027px) {
-	:root {
-		font-size: 16px;
-		--pixel-size: 10;
-	}
+.invisibl{
+	display: none;
 }

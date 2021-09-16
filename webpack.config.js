@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-// const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
@@ -30,14 +30,22 @@ module.exports = {
 		}),
 		new CleanWebpackPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
-		// new CopyWebpackPlugin({
-		// 	patterns: [
-		// 		{
-		// 			from: path.resolve(__dirname, './src/assets/img/ouch2.svg'),
-		// 			to: path.resolve(__dirname, './dist'),
-		// 		},
-		// 	],
-		// }),
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: path.resolve(__dirname, './src/assets/img/logo/logo.png'),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(__dirname, './src/assets/img/logo/logos.png'),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(__dirname, './src/assets/img/baner.png'),
+					to: path.resolve(__dirname, './dist'),
+				},
+			],
+		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].[contenthash].css',
 		}),
@@ -57,8 +65,8 @@ module.exports = {
 			},
 			// изображения
 			{
-				test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
-				type: 'asset/resource',
+				test: /\.(png|jpg)$/,
+				loader: 'url-loader'
 			},
 			// шрифты и SVG
 			{

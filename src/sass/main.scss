@@ -1,8 +1,9 @@
 @import '../../node_modules/normalize-scss/sass/_normalize.scss';
 @import './site/fonts.css';
-@import 'site/variables';
-@import 'site/mixins/mixins';
-@import 'site/grid';
-@import 'site/style';
+@import 'site/variables.scss';
+@import 'site/mixins/mixins.scss';
+@import 'site/grid.scss';
+@import 'site/style.scss';
 
 @import 'site/header.scss';
+@import 'site/banner.scss';
