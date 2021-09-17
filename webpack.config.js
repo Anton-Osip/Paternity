@@ -60,15 +60,21 @@ module.exports = {
 						loader: MiniCssExtractPlugin.loader,
 					},
 					'css-loader',
-					'sass-loader',
+					'resolve-url-loader',
+					{
+						loader: "sass-loader",
+						options: {
+							sourceMap: true,
+						},
+					},
 				],
 			},
-			// изображения
+			// Images
 			{
 				test: /\.(png|jpg)$/,
 				loader: 'url-loader'
 			},
-			// шрифты и SVG
+			// Fonts and SVG
 			{
 				test: /\.(woff(2)?|eot|ttf|otf|svg)$/,
 				type: 'asset/inline',
