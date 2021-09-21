@@ -44,6 +44,22 @@ module.exports = {
 					from: path.resolve(__dirname, './src/assets/img/baner.png'),
 					to: path.resolve(__dirname, './dist'),
 				},
+				{
+					from: path.resolve(__dirname, './src/assets/img/contacts/tv.png'),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(__dirname, './src/assets/img/contacts/viber.png'),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(__dirname, './src/assets/img/contacts/tv-bl.png'),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(__dirname, './src/assets/img/contacts/viber-bl.png'),
+					to: path.resolve(__dirname, './dist'),
+				},
 			],
 		}),
 		new MiniCssExtractPlugin({
