@@ -1,0 +1,319 @@
+.header{
+    padding-top: 72px;
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__big-logo {
+        width:21.375rem;
+        height: 4.5rem;
+    }
+    &__small-logo {
+        display: none;
+
+        width: 5.125rem;
+        height: 4.93rem;
+    }
+    &__nav {
+        flex-basis: 70%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        transition: transform .5s;
+    }
+    &__list {
+        list-style: none;
+
+        flex-basis: 62%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__link {
+        position: relative;
+
+        @include font(700,1.25rem, 0.84em, $Manserrat-Bold);
+        padding-bottom: 5px;
+
+        color: $header-color;
+        opacity: 0.7;
+        &::after{
+            content: '';
+            display: block;
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 3px;
+            background-color: $header-color;
+
+            transform-origin: center;
+            transform: rotateY(90deg);
+            transition: transform .5s,opacity .5s;
+        }
+        &:hover.header__link::after{
+            transform: rotateY(0deg);
+        }
+        &:hover{
+            opacity: 1;
+        }
+        &.active{
+            opacity: 1;
+        }
+    }
+    &__contacts {
+        @include font(700,1.25rem, 0.84em, $Manserrat-Bold);
+    }
+    &__phons {
+        margin-bottom: 10px;
+    }
+    &__phone {
+        display: none;
+
+        color: $header-color;
+    }
+    &__main-contacts{
+        display: flex;
+        align-items: center;
+    }
+    &__main-phone {
+        color: $header-color;
+
+        margin-right: 0.9em;
+    }
+    &__telegram,
+    &__viber {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    &__telegram {
+        margin-right: 8px;
+
+        background: url('../../../assets/img/contacts/tv.png')no-repeat center/cover;
+    }
+    &__viber {
+        background: url('../../../assets/img/contacts/viber.png')no-repeat center/cover;
+    }
+    &__mail {
+        color: $header-color;
+    }
+    &__btn {
+        display: none;
+    }
+    &__burger-menu {
+        display: none;
+    }
+}
+
+@media(max-width:768px){
+    .header{
+        padding-top: 50px;
+        &__big-logo {
+            display: none;
+        }
+        &__small-logo {
+            display: block;
+        }
+        &__nav {
+            flex-basis: 90%;
+        }
+        &__list{
+            flex-basis: 68%;
+        }
+    }
+}
+
+@media(max-width:540px){
+    .header{
+        padding-top: 25px;
+
+        position: relative;
+        &__nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            opacity: 1;
+            transform: translateY(-100%);
+
+            background-color: $header-color;
+
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &__burger-menu {
+            width: 2.25rem;
+            height: 2.25rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__line {
+            position: relative;
+
+            width: 1.875rem;
+            height: 3px;
+
+            background-color:  $header-color;
+            transition: transform .5s, color .5s;
+            &::after,
+            &::before{
+                content: '';
+                display: block;
+
+                position: absolute;
+
+                width: 1.875rem;
+                height: 3px;
+
+                background-color:  $header-color;
+            }
+            &::after{
+                top: 8px;
+                left: 0;
+            }
+            &::before{
+                bottom: 8px;
+                left: 0;
+            }
+        }
+    
+        &__nav.active{
+            transform: translateY(0%);
+            transition: transform .5s;
+        }
+        &__nav{
+            flex-direction: column;
+
+            padding: 48px 32px 43px 32px;
+        }
+        &__list {
+            min-height: 248px;
+            width: 100%;
+
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+
+            margin-bottom: 48px;
+            &::before{
+                margin-bottom: 32px;
+                content:"Меню";
+                @include font(500,1rem, 1.5em, $Manserrat-Medium);
+                color: $black-color;
+                opacity: 0.3;
+            }
+        }
+        &__item {
+            width: 100%;
+        }
+        &__link {
+            display: block;
+
+            color:$text-color;
+
+            @include font(700,1rem, 1.5em, $Manserrat-Bold);
+            &::after{
+                background-color: $text-color;
+            }
+        }
+        &__contacts {
+            @include font(700,1rem, 1.5em, $Manserrat-Bold);
+
+            display: flex;
+            flex-direction:column;
+        }
+        &__phons {
+            order:2;
+            &::before{
+                content:"Контактная информация";
+                display: block;
+
+                margin-bottom: 8px;
+                
+                @include font(500,1rem, 1.5em, $Manserrat-Medium);
+                color: $black-color;
+
+                opacity: 0.3;
+            }
+        }
+        &__phone {
+            display: block;
+
+            margin-bottom: 12px;
+    
+            color: $phone-color;
+        }
+        &__main-phone {
+            color: $phone-color;
+        }
+        &__telegram,
+        &__viber {
+            width: 24px;
+            height: 24px;
+        }
+        &__telegram {
+            background: url('../../../assets/img/contacts/tv-bl.png')no-repeat center/cover;
+        }
+        &__viber {
+            background: url('../../../assets/img/contacts/viber-bl.png')no-repeat center/cover;
+        }
+        &__mails {
+            order:1;
+            margin-bottom: 24px;
+            &::before{
+                content:"Почта";
+                display: block;
+
+                margin-bottom: 8px;
+                
+                @include font(500,1rem, 1.5em, $Manserrat-Medium);
+                color: $black-color;
+
+                opacity: 0.3;
+            }
+        }
+        &__mail {
+            color: $text-color;
+            
+            @include font(500,1rem, 1.5em, $Manserrat-Medium);
+        }
+    }
+    
+    .header__burger-menu.active {
+        position: absolute;
+        top: 50px;
+        right: 15px;
+        .header__line {
+            transform: rotateZ(225deg);
+            transition: transform .5s, color .5s;
+            background-color: $text-color;
+            &::after{
+                top: 0px;
+
+                background-color: $text-color;
+                
+                transform: rotateZ(270deg);
+            }
+            &::before{
+                display: none;
+            }
+        }
+    }
+}

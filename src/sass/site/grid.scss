@@ -1,6 +1,6 @@
-$columns: 20;
+$columns: 12;
 $gutters: 30px;
-$container-width: 1480px;
+$container-width: 1482px;
 @for $i from 1 through $columns {
 	.col-#{$i} {
 		width: (100 / ($columns / $i)) * 1%;

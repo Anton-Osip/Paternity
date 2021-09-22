@@ -32,10 +32,14 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new CopyWebpackPlugin({
 			patterns: [
-				// {
-				// 	from: path.resolve(__dirname, './src/assets/img/logo/logo.png'),
-				// 	to: path.resolve(__dirname, './dist'),
-				// }
+				{
+					from: path.resolve(__dirname, './src/assets/img/logo/big-logo.png'),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(__dirname, './src/assets/img/logo/small-logo.png'),
+					to: path.resolve(__dirname, './dist'),
+				}
 			],
 		}),
 		new MiniCssExtractPlugin({
