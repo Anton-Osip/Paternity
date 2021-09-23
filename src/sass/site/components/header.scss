@@ -1,4 +1,8 @@
 .header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     padding-top: 72px;
     &__container{
         display: flex;
@@ -111,9 +115,65 @@
     }
     &__btn {
         display: none;
+
     }
     &__burger-menu {
         display: none;
+    }
+}
+
+.header.header__scroll{
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0; 
+
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    background:$header-color;
+    & .container{
+        max-width: 1720px;
+        width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    & .header__big-logo {
+        display: none;
+    }
+    & .header__small-logo {
+        display: block;
+    }
+    & .header__nav {
+        flex-basis: 66%;
+    }
+    & .header__list {
+        flex-basis: 70%;
+    }
+    & .header__link {
+        color: $text-color;
+        &::after{
+            background-color: $text-color;
+        }
+    }
+    & .header__main-phone {
+        color: $text-color;
+        
+        margin-right: 0;
+
+        font: 700 1.25rem/1em "Manserrat-Bold";
+    }
+    & .header__telegram {
+        background: url('../../../assets/img/contacts/tv-bl.png')no-repeat center/cover;
+    }
+    & .header__viber {
+        background: url('../../../assets/img/contacts/viber-bl.png')no-repeat center/cover;
+    }
+    & .header__mail {
+        display: none;
+    }
+    & .header__btn {
+        display: block;
     }
 }
 
@@ -138,8 +198,6 @@
 @media(max-width:540px){
     .header{
         padding-top: 25px;
-
-        position: relative;
         &__nav {
             position: absolute;
             top: 0;

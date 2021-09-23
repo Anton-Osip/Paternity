@@ -1,0 +1,69 @@
+.banner{
+    padding: 250px 0 100px;
+
+    background: url('../../../assets/img/baner.png')no-repeat center/cover;
+    
+    &__container {
+        min-height: calc(100vh - 350px);
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    &__title {
+        max-width: 63rem;
+        width: 100%;
+
+        @include font(700,5.25rem, 1em, $Manserrat-Bold);
+
+        color: $header-color;
+
+        margin-bottom: 2.25rem;
+    }
+    &__subtitle {
+        max-width: 37.5rem;
+        width: 100%;
+
+        @include font(500,1.5rem, 1.25em,$Manserrat-Medium);
+
+        color: $header-color;
+        opacity: 0.8;
+
+        margin-bottom: 4.62rem;
+    }
+}
+@media(max-width:768px){
+    .banner{
+        padding: 150px 0 50px;
+        &__container {
+            min-height: calc(100vh - 200px);
+        }
+    }
+}
+@media(max-width:540px){
+    .banner{
+        padding: 150px 0 25px;
+        &__container {
+            min-height: calc(100vh - 175px);
+        }
+        &__title {
+            max-width: 19.5rem;
+    
+            @include font(700,1.875rem, 1.06em, $Manserrat-Bold);
+    
+            margin-bottom: 1rem;
+        }
+        &__subtitle {
+            max-width: 19.5rem;
+    
+            @include font(500,1rem, 1.5em, $Manserrat-Medium);
+    
+            margin-bottom: 1.5rem;
+        }
+        &__btn{
+            font-size: 0.845rem;
+            line-height: 1em;
+        }
+    }
+}

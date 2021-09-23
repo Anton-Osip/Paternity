@@ -78,10 +78,27 @@ class Header{
             headerNav.classList.toggle('active');
         });
     };
+    scrollDown(){
+        const header = document.querySelector('.header'),
+            banner = document.querySelector('.banner');
+            console.log(banner);
+        window.addEventListener('scroll',()=>{
+            if(header.offsetWidth>984 && window.scrollY>banner.offsetHeight/2){
+
+                header.classList.add('header__scroll');
+            }else{
+                header.classList.remove('header__scroll');
+            }
+
+            
+        });
+        
+    };
     init(){
         this.creat();
         this.render();
         this.burgerMenu();
+        this.scrollDown()
     };
 }
 

@@ -20,10 +20,22 @@ img {
 body {
     font-family: $Manserrat-Bold;
     background-color: #000;
-
+    height: 1000vh;
 }
 
 .btn {
+    @include font(700,1rem, 1.5em, $Manserrat-Bold);
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: $text-color;
+
+    padding: 1.25rem 1.8em;
+
+    background: $btn-color;
+
+    cursor: pointer;
 }
 
 
