@@ -39,7 +39,15 @@ module.exports = {
 				{
 					from: path.resolve(__dirname, './src/assets/img/logo/small-logo.png'),
 					to: path.resolve(__dirname, './dist'),
-				}
+				},
+				{
+					from: path.resolve(__dirname, './src/assets/img/about/img1.jpg'),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(__dirname, './src/assets/img/about/img2.jpg'),
+					to: path.resolve(__dirname, './dist'),
+				},
 			],
 		}),
 		new MiniCssExtractPlugin({

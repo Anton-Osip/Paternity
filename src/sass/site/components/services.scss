@@ -1,0 +1,153 @@
+.services{
+    &__row{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+}
+
+.card {
+    position: relative;
+
+    max-width: 474px;
+    width: 100%;
+    min-height:430px ;
+
+    margin-bottom: 30px;
+
+    &__wrapper{
+        background:$card-bgc ;
+        min-height: 430px;
+        width: 100%;
+        padding: 50px 50px 220px 50px;
+        &.open{
+            position: absolute;
+            margin: 0 0px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: #FFFFFF;
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.12);
+        }
+    }
+    &__complex {
+        @include font(500,20px, 24px, $Manserrat-Medium);
+
+        color: $text-color;
+        opacity: 0.5;
+
+        margin-bottom: 16px;
+    }
+    &__title {
+        @include font(700,34px, 48px, $Manserrat-Bold);
+
+        margin-bottom: 24px;
+        
+        color: $text-color;
+    }
+    &__list {
+        display: none;
+        overflow: hidden;
+    }
+    &__list.open {
+        display: block;
+    }
+    &__item {
+        @include font(500,16px, 24px, $Manserrat-Medium);
+
+        color: #000000;
+        opacity: 0.4;
+
+        margin: 4px 0;
+        padding-left: 32px;
+
+        position: relative;
+        &::before{
+            content :'';
+            display: block;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            width: 24px;
+            height: 24px;
+
+            background: url('../../../assets/img/ok.png')no-repeat center/cover;
+        }
+    }
+    &__bottom{
+        position: absolute;
+        left: 50px;
+        bottom: 50px;
+        width: calc(100% - 100px);
+    }
+    &__price {
+        @include font(700,42px, 48px, $Manserrat-Bold);
+        color: $phone-color;
+        margin-bottom: 35px;
+    }
+    &__arrow {
+        width: 56px;
+        height: 18px;
+
+        background: url('../../../assets/img/Arrow.png')no-repeat center/cover;
+
+        margin-left: auto;
+
+        cursor: pointer;
+    }
+    &__btn {
+        border: 2px solid #84A1DB;
+        color: #84A1DB;
+        background-color: #fff;
+        display: none;
+        transition: color .3s,  background-color .3s ;
+        &:hover{
+            background-color: $phone-color;
+            color:  $header-color;
+        }
+        &.visibil{
+            display: block;
+        }
+    }
+}
+@media(max-width:1024px){
+    .card {
+        max-width: 316px;
+        min-height:310px ;
+        &__wrapper{
+            min-height: 310px;
+            padding: 30 30 230px 30;
+        }
+        &__complex {
+            @include font(500,16px, 24px, $Manserrat-Medium);
+    
+            margin-bottom: 2px;
+        }
+        &__title {
+            @include font(700,24px, 30px, $Manserrat-Bold);
+    
+            margin-bottom: 10px;
+        }
+        &__item {
+            @include font(500,14px, 20px, $Manserrat-Medium);
+        }
+        &__bottom{
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            width: calc(100% - 60px);
+        }
+        &__price {
+            @include font(700,30px, 32px, $Manserrat-Bold);
+        }
+        &__btn {
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 8px;
+        }
+    }
+}

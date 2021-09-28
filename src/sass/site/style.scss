@@ -19,8 +19,6 @@ img {
 
 body {
     font-family: $Manserrat-Bold;
-    background-color: #000;
-    height: 1000vh;
 }
 
 .btn {
@@ -33,10 +31,22 @@ body {
 
     padding: 1.25rem 1.8em;
 
-    background: $btn-color;
+    background: $phone-color;
 
     cursor: pointer;
 }
+.section{
+    padding: 140px 0;
+}
+
+.title{
+    @include font(700,3.75rem, 1em, $Manserrat-Bold);
+
+    color: $text-color;
+    
+    margin-bottom: 5.31rem;
+}
+
 
 
 @media (min-width:1270px) {
@@ -47,6 +57,9 @@ body {
 @media (max-width:768px) {
     :root {
         font-size:calc(.15rem + 1vw);
+    }
+    .section{
+        padding: 25px 0;
     }
 }
 @media (max-width:540px) {

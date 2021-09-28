@@ -81,7 +81,6 @@ class Header{
     scrollDown(){
         const header = document.querySelector('.header'),
             banner = document.querySelector('.banner');
-            console.log(banner);
         window.addEventListener('scroll',()=>{
             if(header.offsetWidth>984 && window.scrollY>banner.offsetHeight/2){
 
@@ -98,7 +97,7 @@ class Header{
         this.creat();
         this.render();
         this.burgerMenu();
-        this.scrollDown()
+        // this.scrollDown()
     };
 }
 
