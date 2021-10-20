@@ -1,0 +1,60 @@
+.cooperate {
+	background: $card-bgc;
+}
+.slider {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&__btn {
+		border: 0px;
+
+		font-size: 31px;
+
+		width: 48px;
+		height: 48px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: $text-color;
+
+		background: $card-bgc;
+		cursor: pointer;
+	}
+	&__wrapper {
+		margin: 0 15px;
+		max-width: 1482px;
+
+		overflow: hidden;
+	}
+	&__lines {
+		display: flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		transition: transform 0.5s;
+	}
+}
+.slide {
+	min-width: 25%;
+	&__img {
+		width: 100%;
+	}
+}
+
+@media (max-width: 926px) {
+	.slide {
+		min-width: 33%;
+	}
+}
+
+@media (max-width: 726px) {
+	.slide {
+		min-width: 50%;
+	}
+}
+@media (max-width: 524px) {
+	.slide {
+		min-width: 100%;
+	}
+}

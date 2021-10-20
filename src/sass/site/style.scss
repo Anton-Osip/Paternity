@@ -1,69 +1,74 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
-    box-sizing: border-box;
-    font-size:calc(.073rem + 1vw)
+	box-sizing: border-box;
+	font-size: calc(0.073rem + 1vw);
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 img {
-    display: block;
+	display: block;
 }
 
 body {
-    font-family: $Manserrat-Bold;
+	font-family: $Manserrat-Bold;
 }
 
 .btn {
-    @include font(700,1rem, 1.5em, $Manserrat-Bold);
-    letter-spacing: 1px;
+	@include font(700, 1rem, 1.5em, $Manserrat-Bold);
+	letter-spacing: 1px;
 
-    text-transform: uppercase;
+	text-transform: uppercase;
 
-    color: $text-color;
+	color: $text-color;
 
-    padding: 1.25rem 1.8em;
+	padding: 1.25rem 1.8em;
 
-    background: $phone-color;
+	background: $phone-color;
 
-    cursor: pointer;
+	cursor: pointer;
+	border: 0px;
 }
-.section{
-    padding: 140px 0;
-}
-
-.title{
-    @include font(700,3.75rem, 1em, $Manserrat-Bold);
-
-    color: $text-color;
-    
-    margin-bottom: 5.31rem;
+.section {
+	padding: 140px 0;
 }
 
+.title {
+	@include font(700, 3.75rem, 1em, $Manserrat-Bold);
 
+	color: $text-color;
 
-@media (min-width:1270px) {
-    :root {
-        font-size: 16px;
-    }
+	margin-bottom: 5.31rem;
 }
-@media (max-width:768px) {
-    :root {
-        font-size:calc(.15rem + 1vw);
-    }
-    .section{
-        padding: 25px 0;
-    }
+
+@media (min-width: 1270px) {
+	:root {
+		font-size: 16px;
+	}
+	.section {
+		padding: 100px 0;
+	}
 }
-@media (max-width:540px) {
-    :root {
-        font-size:16px;
-    }
+@media (max-width: 768px) {
+	:root {
+		font-size: calc(0.15rem + 1vw);
+	}
+	.section {
+		padding: 25px 0;
+	}
+}
+@media (max-width: 540px) {
+	:root {
+		font-size: 16px;
+	}
+	.title {
+		@include font(700, 24px, 30px, $Manserrat-Bold);
+	}
 }

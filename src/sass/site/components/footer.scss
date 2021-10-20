@@ -1,0 +1,39 @@
+.footer {
+	padding: 53px 0;
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__left {
+		@include font(500, 20px, 24px, $Manserrat-Medium);
+		color: $text-color;
+	}
+	&__right {
+		@include font(500, 20px, 24px, $Manserrat-Medium);
+
+		color: $text-color;
+
+		opacity: 0.5;
+
+		display: flex;
+		align-items: center;
+	}
+	&__logo {
+		margin-left: 29px;
+
+		width: 37px;
+		height: 34px;
+	}
+}
+@media (max-width: 868px) {
+	.footer {
+		padding: 25px 0;
+		&__container {
+			display: block;
+		}
+		&__left {
+			display: none;
+		}
+	}
+}

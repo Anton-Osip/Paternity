@@ -1,15 +1,17 @@
-class Header{
-    element = '';
+class Header {
+	element = ''
 
-    creat(){
-        this.element = document.createElement('header');
-    };
-    
-    render(){
-        this.element.classList.add('header');
-        document.getElementById('app').insertAdjacentElement('beforeend', this.element);
+	creat() {
+		this.element = document.createElement('header')
+	}
 
-        this.element.innerHTML = `
+	render() {
+		this.element.classList.add('header')
+		document
+			.getElementById('app')
+			.insertAdjacentElement('beforeend', this.element)
+
+		this.element.innerHTML = `
             <div class="container">
                 <div class="header__container">
                     <div class="header__big-logo header__logo">
@@ -21,27 +23,27 @@ class Header{
                     <nav class="header__nav">
                         <ul class="header__list">
                             <li class="header__item">
-                                <a href="#" class="header__link active">
+                                <a href="#services" class="header__link active">
                                     Услуги
                                 </a>
                             </li>
                             <li class="header__item">
-                                <a href="#" class="header__link">
+                                <a href="#about" class="header__link">
                                     О нас
                                 </a>
                             </li>
                             <li class="header__item">
-                                <a href="#" class="header__link">
+                                <a href="#interactions" class="header__link">
                                     Процесс работы
                                 </a>
                             </li>
                             <li class="header__item">
-                                <a href="#" class="header__link">
-                                    Клиеты
+                                <a href="#cooperate" class="header__link">
+                                    Клиенты
                                 </a>
                             </li>
                             <li class="header__item">
-                                <a href="#" class="header__link">
+                                <a href="#contacts" class="header__link">
                                     Контакты
                                 </a>
                             </li>
@@ -67,38 +69,37 @@ class Header{
                         <div class="header__line"></div>
                     </div>
                 </div>
-            </div>`;
-    };
-    burgerMenu(){
-        const headerNav = document.querySelector('.header__nav'),
-            headerBurgerMenu = document.querySelector('.header__burger-menu');
+            </div>`
+	}
+	burgerMenu() {
+		const headerNav = document.querySelector('.header__nav'),
+			headerBurgerMenu = document.querySelector('.header__burger-menu')
 
-        headerBurgerMenu.addEventListener('click',()=>{
-            headerBurgerMenu.classList.toggle('active');
-            headerNav.classList.toggle('active');
-        });
-    };
-    scrollDown(){
-        const header = document.querySelector('.header'),
-            banner = document.querySelector('.banner');
-        window.addEventListener('scroll',()=>{
-            if(header.offsetWidth>984 && window.scrollY>banner.offsetHeight/2){
-
-                header.classList.add('header__scroll');
-            }else{
-                header.classList.remove('header__scroll');
-            }
-
-            
-        });
-        
-    };
-    init(){
-        this.creat();
-        this.render();
-        this.burgerMenu();
-        // this.scrollDown()
-    };
+		headerBurgerMenu.addEventListener('click', () => {
+			headerBurgerMenu.classList.toggle('active')
+			headerNav.classList.toggle('active')
+		})
+	}
+	scrollDown() {
+		const header = document.querySelector('.header'),
+			banner = document.querySelector('.banner')
+		window.addEventListener('scroll', () => {
+			if (
+				header.offsetWidth > 984 &&
+				window.scrollY > banner.offsetHeight / 2
+			) {
+				header.classList.add('header__scroll')
+			} else {
+				header.classList.remove('header__scroll')
+			}
+		})
+	}
+	init() {
+		this.creat()
+		this.render()
+		this.burgerMenu()
+		this.scrollDown()
+	}
 }
 
 export default new Header().init()

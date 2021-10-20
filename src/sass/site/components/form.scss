@@ -1,0 +1,146 @@
+.contacts {
+	&__wrapper {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+	&__inputs {
+		max-width: 62%;
+		width: 100%;
+	}
+	&__title {
+		margin-bottom: 40px;
+	}
+	&__subtitle {
+		@include font(600, 24px, 30px, $Manserrat-SemiBold);
+
+		color: $text-color;
+
+		opacity: 0.5;
+		margin-bottom: 60px;
+	}
+	&__form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 24px;
+	}
+	&__input {
+		@include font(500, 20px, 24px, $Manserrat-Medium);
+		width: 100%;
+		padding: 24px;
+
+		color: #56698f;
+		background: $card-bgc;
+		border: 1px solid rgba(86, 105, 143, 0.2);
+		&:focus {
+			outline: none;
+		}
+		&:focus.contacts__input::placeholder {
+			opacity: 0;
+		}
+	}
+	&__input::placeholder {
+		@include font(500, 20px, 24px, $Manserrat-Medium);
+
+		color: $text-color;
+
+		opacity: 0.5;
+		transition: opacity 0.3s;
+	}
+	&__input-messege {
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 4;
+	}
+	&__btn {
+		margin-top: 24px;
+		max-width: 268px;
+	}
+}
+
+.contacts__contact {
+	max-width: 432px;
+
+	background: $phone-color;
+	padding: 53px 84px 72px;
+}
+.contact {
+	&__title {
+		@include font(700, 20px, 24px, $Manserrat-Bold);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+
+		margin-bottom: 16px;
+
+		color: $header-color;
+	}
+	&__phone {
+		@include font(600, 20px, 30px, $Manserrat-SemiBold);
+
+		color: $text-color;
+		display: block;
+		margin-bottom: 12px;
+	}
+
+	&__mail {
+		@include font(600, 20px, 30px, $Manserrat-SemiBold);
+
+		color: $text-color;
+		display: block;
+		margin-bottom: 48px;
+	}
+	&__adress {
+		@include font(600, 20px, 30px, $Manserrat-SemiBold);
+
+		color: $text-color;
+		display: block;
+	}
+}
+.last {
+	margin-bottom: 48px;
+}
+@media (max-width: 1170px) {
+	.contacts__contact {
+		display: none;
+	}
+	.contacts__inputs {
+		max-width: 100%;
+		width: 100%;
+	}
+	.contacts__form {
+		max-width: 100%;
+	}
+}
+@media (max-width: 600px) {
+	.contacts {
+		&__title {
+			margin-bottom: 18px;
+		}
+		&__subtitle {
+			@include font(600, 16px, 24px, $Manserrat-SemiBold);
+
+			margin-bottom: 18px;
+		}
+		&__form {
+			grid-template-columns: 1fr;
+			grid-template-rows: 56px 56px 56px 144px;
+			grid-row-gap: 16px;
+		}
+		&__input {
+			@include font(500, 16px, 24px, $Manserrat-Medium);
+			padding: 16px;
+		}
+		&__input::placeholder {
+			@include font(500, 16px, 24px, $Manserrat-Medium);
+		}
+		&__input-messege {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 4;
+			grid-row-end: 5;
+		}
+	}
+}

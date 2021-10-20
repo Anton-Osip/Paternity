@@ -1,0 +1,153 @@
+.interactions {
+	&__row {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	& .employees__cards,
+	& .steps__cards {
+		width: 100%;
+		max-width: 45%;
+	}
+}
+.steps {
+	&__card {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		margin-bottom: 4.3rem;
+	}
+	&__step {
+		@include font(700, 34px, 48px, $Manserrat-Bold);
+
+		color: $phone-color;
+
+		white-space: nowrap;
+	}
+	&__info {
+		max-width: 450px;
+		width: 100%;
+	}
+	&__title {
+		@include font(700, 34px, 48px, $Manserrat-Bold);
+
+		color: $text-color;
+
+		margin-bottom: 18px;
+	}
+	&__text {
+		@include font(500, 20px, 24px, $Manserrat-Medium);
+
+		color: $text-color;
+
+		opacity: 0.5;
+	}
+}
+.employees {
+	&__card {
+		display: flex;
+		align-items: flex-start;
+
+		margin-bottom: 4.3rem;
+	}
+	&__img-box {
+		width: 192px;
+		height: 192px;
+
+		border-radius: 50%;
+
+		overflow: hidden;
+		margin-right: 60px;
+	}
+	&__img {
+		width: 100%;
+	}
+	&__name {
+		@include font(600, 24px, 30px, $Manserrat-SemiBold);
+
+		color: $text-color;
+
+		margin: 18px 0px;
+	}
+	&__position {
+		@include font(500, 20px, 24px, $Manserrat-Medium);
+		color: $text-color;
+
+		opacity: 0.5;
+	}
+}
+@media (max-width: 940px) {
+	.interactions {
+		&__row {
+			flex-direction: column;
+			align-items: start;
+			justify-content: flex-start;
+		}
+		& .employees__cards {
+			max-width: 100%;
+			order: 2;
+		}
+		& .steps__cards {
+			order: 1;
+			max-width: 100%;
+			margin-bottom: 56px;
+		}
+	}
+	.steps {
+		&__card {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+
+			margin-bottom: 20px;
+		}
+		&__step {
+			margin-bottom: 20px;
+		}
+		&__info {
+			max-width: 100%;
+		}
+	}
+}
+@media (max-width: 540px) {
+	.steps {
+		&__card {
+			margin-bottom: 20px;
+		}
+		&__step {
+			@include font(700, 20px, 24px, $Manserrat-Bold);
+			margin-bottom: 20px;
+		}
+		&__title {
+			@include font(700, 16px, 24px, $Manserrat-Bold);
+
+			margin-bottom: 8px;
+		}
+		&__text {
+			@include font(500, 16px, 24px, $Manserrat-Medium);
+		}
+	}
+	.employees {
+		&__card {
+			margin-bottom: 16px;
+		}
+		&__img-box {
+			width: 95px;
+			height: 95px;
+
+			margin-right: 16px;
+			&img {
+				width: 100%;
+			}
+		}
+		&__name {
+			@include font(600, 12px, 20px, $Manserrat-SemiBold);
+
+			margin: 8px 0px;
+		}
+		&__position {
+			@include font(500, 12px, 20px, $Manserrat-Medium);
+		}
+	}
+}

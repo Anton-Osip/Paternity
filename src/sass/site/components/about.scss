@@ -1,99 +1,99 @@
-.about{
-    background: $card-bgc;
+.about {
+	background: $card-bgc;
 
-    &-left__title {
-        @include font(700,3.75rem, 1.2em, $Manserrat-Bold);
+	&-left__title {
+		@include font(700, 3.75rem, 1.2em, $Manserrat-Bold);
 
-        color: $text-color;
+		color: $text-color;
 
-        margin-bottom: 38px;
-    }
-    &-left__description {
-        @include font(500,1.25rem, 1.2em,$Manserrat-Medium);
+		margin-bottom: 38px;
+	}
+	&-left__description {
+		@include font(500, 1.25rem, 1.2em, $Manserrat-Medium);
 
-        color: $text-color;
-        opacity: 0.5;
+		color: $text-color;
+		opacity: 0.5;
 
-        margin-bottom: 24px;
-    }
-    &-left__links {
-        display: block;
-        @include font(500,1.25rem, 1.2em,$Manserrat-Medium);
+		margin-bottom: 24px;
+	}
+	&-left__links {
+		display: block;
+		@include font(500, 1.25rem, 1.2em, $Manserrat-Medium);
 
-        color: #56698F;
+		color: #56698f;
 
-        margin-bottom: 67px;
-    }
-    &-left__img {
-        max-width: 456px;
-        width: 100%;
-    }
-    &-right__img {
-        display: block;
+		margin-bottom: 67px;
+	}
+	&-left__img {
+		max-width: 456px;
+		width: 100%;
+	}
+	&-right__img {
+		display: block;
 
-        margin-left: auto;
+		margin-left: auto;
 
-        max-width: 726px;
-        width: 100%;
-        margin-bottom: 55px;
-    }
-    &-right__title {
-        @include font(700,2.65rem, 1.14em, $Manserrat-Bold);
+		max-width: 726px;
+		width: 100%;
+		margin-bottom: 55px;
+	}
+	&-right__title {
+		@include font(700, 2.65rem, 1.14em, $Manserrat-Bold);
 
-        color: $text-color;
+		color: $text-color;
 
-        margin-bottom: 22px;
-    }
-    &-right__description {
-        @include font(500,1.25rem, 1.2em,$Manserrat-Medium);
+		margin-bottom: 22px;
+	}
+	&-right__description {
+		@include font(500, 1.25rem, 1.2em, $Manserrat-Medium);
 
-        color: $text-color;
-        opacity: 0.5;
-
-        margin-bottom:40px;
-    }
+		color: $text-color;
+		opacity: 0.5;
+		word-wrap: break-word;
+		margin-bottom: 40px;
+	}
 }
 
-@media(max-width:780px){
-    .about{
-        background: $header-color;
-    
-        &-left__title {
-            @include font(700,24px, 30px, $Manserrat-Bold);
-    
-            margin-bottom: 26px;
-        }
-        &-left__description {
-            @include font(500,16px, 24px,$Manserrat-Medium);
-    
-            margin-bottom: 16px;
-        }
-        &-left__links {
-            display: block;
-            @include font(500,16px, 24px,$Manserrat-Medium);
-    
-            margin-bottom: 18px;
-        }
-        &-left__img {
-            display: none;
-        }
-        &-right__img {
-            margin: 0;
-    
-            max-width: 100%;
-            width: 100%;
+@media (max-width: 780px) {
+	.about {
+		background: $header-color;
 
-            margin-bottom: 36px;
-        }
-        &-right__title {
-            @include font(700,20px, 24px, $Manserrat-Bold);
+		&-left__title {
+			@include font(700, 24px, 30px, $Manserrat-Bold);
 
-            margin-bottom: 18px;
-        }
-        &-right__description {
-            @include font(500,16px, 24px,$Manserrat-Medium);
-    
-            margin-bottom:26px;
-        }
-    }
+			margin-bottom: 26px;
+		}
+		&-left__description {
+			@include font(500, 16px, 24px, $Manserrat-Medium);
+
+			margin-bottom: 16px;
+		}
+		&-left__links {
+			display: block;
+			@include font(500, 16px, 24px, $Manserrat-Medium);
+
+			margin-bottom: 18px;
+		}
+		&-left__img {
+			display: none;
+		}
+		&-right__img {
+			margin: 0;
+
+			max-width: 100%;
+			width: 100%;
+
+			margin-bottom: 36px;
+		}
+		&-right__title {
+			@include font(700, 20px, 24px, $Manserrat-Bold);
+
+			margin-bottom: 18px;
+		}
+		&-right__description {
+			@include font(500, 16px, 24px, $Manserrat-Medium);
+
+			margin-bottom: 26px;
+		}
+	}
 }

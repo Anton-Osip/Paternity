@@ -33,19 +33,98 @@ module.exports = {
 		new CopyWebpackPlugin({
 			patterns: [
 				{
-					from: path.resolve(__dirname, './src/assets/img/logo/big-logo.png'),
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/logo/big-logo.png'
+					),
 					to: path.resolve(__dirname, './dist'),
 				},
 				{
-					from: path.resolve(__dirname, './src/assets/img/logo/small-logo.png'),
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/logo/small-logo.png'
+					),
 					to: path.resolve(__dirname, './dist'),
 				},
 				{
-					from: path.resolve(__dirname, './src/assets/img/about/img1.jpg'),
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/about/img1.jpg'
+					),
 					to: path.resolve(__dirname, './dist'),
 				},
 				{
-					from: path.resolve(__dirname, './src/assets/img/about/img2.jpg'),
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/about/img2.jpg'
+					),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/people/people1.jpg'
+					),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/people/people2.jpg'
+					),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/people/people3.jpg'
+					),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/people/people4.jpg'
+					),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/cooperate/image1.png'
+					),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/cooperate/image2.png'
+					),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/cooperate/image3.png'
+					),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/cooperate/image4.png'
+					),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(__dirname, './src/assets/img/map.png'),
+					to: path.resolve(__dirname, './dist'),
+				},
+				{
+					from: path.resolve(
+						__dirname,
+						'./src/assets/img/footer.png'
+					),
 					to: path.resolve(__dirname, './dist'),
 				},
 			],
@@ -66,7 +145,7 @@ module.exports = {
 					'css-loader',
 					'resolve-url-loader',
 					{
-						loader: "sass-loader",
+						loader: 'sass-loader',
 						options: {
 							sourceMap: true,
 						},
@@ -76,7 +155,7 @@ module.exports = {
 			// Images
 			{
 				test: /\.(png|jpg)$/,
-				loader: 'url-loader'
+				loader: 'url-loader',
 			},
 			// Fonts and SVG
 			{
